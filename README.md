@@ -54,20 +54,15 @@ This IoT project uses a **PIR sensor** to detect human motion and trigger a **re
 ## 🧠 Flowchart (Code Logic)
 
 ```mermaid
-flowchart TD
-    A([Start]) --> B[Initialize Serial Communication]
-    B --> C[Define PIR and LED Pins]
-    C --> D[Connect to WiFi using Blynk.begin()]
-    D --> E[Enter Loop]
+graph TD
+A[Start] --> B[Initialize Blynk & Components]
+B --> C[Read PIR Sensor Input]
+C --> D{Motion Detected?}
+D -- Yes --> E[Turn ON LED]
+E --> F[Send Alert via Blynk]
+F --> C
+D -- No --> G[Turn OFF LED]
+G --> C
 
-    E --> F[Read PIR Sensor Input]
-    F --> G{Is Motion Detected?}
 
-    G -- Yes --> H[Turn ON LED]
-    H --> I[Print "Motion Detected!" to Serial Monitor]
-    I --> J[Send Blynk Event]
-    J --> K[Wait 1 second]
-    K --> E
-
-    G -- No --> L[Turn OFF LED]
-    L --> E
+  
