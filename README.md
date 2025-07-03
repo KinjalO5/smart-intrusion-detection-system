@@ -10,7 +10,7 @@ This IoT project uses a **PIR sensor** to detect human motion and trigger a **re
 
 ---
 
-## 🔧 Features
+##  Features
 
 -  Motion detection using PIR sensor
 -  LED turns ON when motion is detected
@@ -47,7 +47,7 @@ This IoT project uses a **PIR sensor** to detect human motion and trigger a **re
 
 ##  Simulation Link
 
-🔗 **[Click here to run the simulation on Wokwi](https://wokwi.com/projects/399594436845783041)**
+ **[Click here to run the simulation on Wokwi](https://wokwi.com/projects/399594436845783041)**
 
 ---
 
